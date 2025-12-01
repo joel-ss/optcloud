@@ -1,4 +1,5 @@
-# Template
-## For future
-### Exercicses
-![](/assets/example.png)
+# Script
+![](/assets/script.png)
+
+# SSH Connections
+![](/assets/ssh.png)
