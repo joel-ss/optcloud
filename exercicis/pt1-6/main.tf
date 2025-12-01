@@ -1,6 +1,11 @@
+# ---------- DATA ----------
+# Gets the list of available azs in the defined region.
+data "aws_availability_zones" "available" {
+  state = "available"
+}
 # ---------- LOCALS ----------
 locals {
-  azs = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d", "us-east-1f"]
+  azs = data.aws_availability_zones.available.names
   private_subnets = {
     for i in range(var.private_instance_count) :
     "private_${i + 1}_${element(local.azs, i)}" => {
@@ -11,6 +16,7 @@ locals {
     }
   }
 }
+
 # ---------- VPC ----------
 # Defines the main Virtual Private Cloud.
 # The CIDR block is provided via variables and used to derive subnets later.
