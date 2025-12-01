@@ -1,5 +1,5 @@
 # Script
-![](/assets/script.png)
+![](assets/script.png)
 
 # SSH Connections
-![](/assets/ssh.png)
+![](assets/ssh.png)
