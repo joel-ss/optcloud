@@ -37,12 +37,16 @@ terraform destroy   # elimina los recursos al terminar
 
 ## 📝 Contenido
 
-<!-- Opcional: enumera aquí los ejercicios principales para que se entienda el
-     alcance de un vistazo. Ejemplos del tipo de temas habituales: -->
+Los ejercicios siguen una progresión, de lo más básico a infraestructura de red más completa:
 
-- Provisión de instancias EC2
-- Redes: VPC, subredes y security groups
-- Almacenamiento y otros servicios de AWS
+- **[pt1-3 — Primeras instancias EC2 y VPC básica](exercicis/pt1-3)**
+  Instancias EC2 con parámetros mínimos (AMI, tipo) y una VPC propia (`10.0.0.0/16`) con varias subredes e instancias dentro.
+- **[pt1-4 — Red completa y conectividad](exercicis/pt1-4)**
+  VPC y subredes, Internet Gateway, tablas de rutas, Security Groups e instancias, con comprobaciones de acceso SSH y *ping*.
+- **[pt1-5 — Meta-argumentos `count` y `for_each`](exercicis/pt1-5)**
+  La misma infraestructura resuelta de dos maneras para comparar ambos enfoques: [`count`](exercicis/pt1-5/count) · [`for_each`](exercicis/pt1-5/for_each).
+- **[pt1-6 — Bastion host y SSH automatizado](exercicis/pt1-6)**
+  Subred pública (bastion) y subredes privadas derivadas con `cidrsubnet`, usando `data`, `locals` y `templatefile`, más un script que configura el acceso SSH a las instancias privadas.
 
 ## 📄 Licencia
 
